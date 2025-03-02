@@ -77,13 +77,13 @@ Note: the term _Terraform_ is used in this documentation when talking about gene
 
 ## Recommended setup
 
-- OpenTofu 1.6+ (recommended) or Terraform 1.0+ (warning: versions above 1.6 are not open-source, and may cause legal issues depending on the context you are using it).
+- OpenTofu 1.6+ (recommended) or Terraform 1.0+ (warning: versions above 1.6 are not open-source, and may cause legal issues depending on the context you are using it for).
 - An AWS S3 bucket and DynamoDB table for state centralization in AWS.
 - An Azure Blob Storage container for state centralization in Azure.
 
 ## Installation
 
-tfwrapper should installed using pipx (recommended) or pip:
+tfwrapper should be installed using pipx (recommended) or pip:
 
 ```bash
 pipx install claranet-tfwrapper
@@ -99,13 +99,13 @@ eval "$(register-python-argcomplete tfwrapper -e tfwrapper)"
 
 You can then press the completion key (usually `Tab ↹`) twice to get your partially typed `tfwrapper` commands completed.
 
-Note: the `-e tfwrapper` parameter adds an suffix to the defined `_python_argcomplete` function to avoid clashes with other packages (see https://github.com/kislyuk/argcomplete/issues/310#issuecomment-697168326 for context).
+Note: the `-e tfwrapper` parameter adds a suffix to the defined `_python_argcomplete` function to avoid clashes with other packages (see https://github.com/kislyuk/argcomplete/issues/310#issuecomment-697168326 for context).
 
 ## Upgrade from tfwrapper v7 or older
 
 If you used versions of the wrapper older than v8, there is not much to do when upgrading to v8
 except a little cleanup.
-Indeed, the wrapper is no longer installed as a git submodule of your project like it used to be instructed and there is no longer any `Makefile` to activate it.
+Indeed, the wrapper is no longer installed as a git submodule of your project like it used to be instructed, and there is no longer any `Makefile` to activate it.
 
 Just clean up each project by destroying the `.wrapper` submodule:
 
